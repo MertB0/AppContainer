@@ -1,0 +1,97 @@
+﻿﻿@{
+    ViewData["Title"] = "Weather Forecast";
+    Layout = "_Weather";
+}
+@model List<WeatherModel>
+
+
+
+<div class="row text-center justify-content-center">
+
+
+
+    <div class="row text-center">
+        <div class="weather col-lg-6 mx-auto">
+            <div class="row justify-content-center">
+                <div class="col info"  style=" font-size:40px">
+                    <div class="location mt-3">
+                        <span class="cityname">Sakarya</span>
+                        <span>,</span>
+                        <span class="countryname">TR</span>
+                    </div>
+
+                    <div class="degree mt-5">
+                        <h1 style="font-size:50px" class="temp">24°C</h1>
+                        <h2 style="font-size:35px" class="sunny">Clear</h2>
+                    </div>
+                </div>
+                <div class="col detail">
+                    <div class="details ">
+                        
+                        <div style="font-size:25px" class="win mt-2">
+                            <span class="title">WIND</span>
+                            <span class="value wind">1.46 km/h</span>
+                        </div>
+                        <div style="font-size:25px" class="humid mt-2">
+                            <span class="title">HUMIDITY</span>
+                            <span class="value humidity">12 %</span>
+                        </div>
+                        <div style="font-size:25px" class="press mt-2">
+                            <span class="title">PRESSURE</span>
+                            <span class="value pressure">1007 mb</span> <br />
+                        </div>
+                        
+                    </div>
+                    <div class="search mt-5 inputBox">
+                        <input class="bosluk" type="text" placeholder="Change Location" spellcheck="false">
+                        <br />
+                        <button>Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col">
+        <div class="row">
+            @foreach (var app in Model)
+            {
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="weather">
+                        <h1 style="font-size:50px" class="temp">
+                            @{
+                                var a = app.Main.Temp - 273.15;
+                                app.Main.Temp = a;
+                            } @app.Main.Temp.ToString("0")
+                            <span class="othercelcius">°C</span>
+                        </h1>
+                        <div style="font-size:25px" class="location">
+                            <i class="loc-icon fa-solid fa-location-dot"></i>
+                            <span class="cityname">@app.Name</span>
+                            <span>,</span>
+                            <span class="countryname">@app.Sys.Country</span>
+                        </div>
+                        <div style="font-size:25px"s class="details mt-5">
+                            <div class="win mt-5">
+                                <span class="title">WIND</span>
+                                <span class="value wind">@app.Wind.Speed km/h</span>
+                            </div>
+                            <div class="humid mt-5">
+                                <span class="title">HUMIDITY</span>
+                                <span class="value humidity">@app.Main.Humidity %</span>
+                            </div>
+                            <div class="press mt-5">
+                                <span class="title">PRESSURE</span>
+                                <span class="value pressure">@app.Main.Pressure mb</span> <br />
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "_todo";
+}
+
+
+@model List<ToDoList>
+<section class="container">
+ 
+    <form class="form">
+        <h2>To-Do List</h2>
+
+        <div>
+            <label class="form__label" for="todo" style="font-size:20px">Today I need to</label>
+            <input id="todo" class="form__input" required>
+            <button id="btn-add" class="button"><span>Submit</span></button>
+        </div>
+    </form>
+
+    <div>
+        <ul class="toDoList">
+            @foreach (var list in Model)
+            {
+                <li data-id="@list.Id">@list.ToDoListItem</li>
+            }
+        </ul>
+    </div>
+</section>

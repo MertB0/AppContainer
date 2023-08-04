@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AppContainer
+build_property.RootNamespace = AppContainer
+build_property.ProjectDir = C:\Users\ynsmr\OneDrive\Masaüstü\AppContainer\AppContainer\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ynsmr\OneDrive\Masaüstü\AppContainer\AppContainer
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/BMI/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk1JXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/RandomQuotes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZG9tUXVvdGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/_BMI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CTUkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/_random.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9yYW5kb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/_todo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF90b2RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/_Weather.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9XZWF0aGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/ToDoList/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9Eb0xpc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Weather/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ynsmr/OneDrive/Masaüstü/AppContainer/AppContainer/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-47rora7ha7

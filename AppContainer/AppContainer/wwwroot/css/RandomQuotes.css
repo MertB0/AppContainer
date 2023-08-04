@@ -1,0 +1,51 @@
+﻿body {
+    background: linear-gradient(270deg, #4f1212, #000000);
+    color: red;
+    font-family: Tahoma;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.form {
+    margin: 100px;
+    background-color: black;
+    padding: 40px;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 0 40px 0 #ff0022;
+}
+.form:hover {
+    box-shadow: 0 0 600px 0 #ff0022;
+    transition: .4s;
+    transform: scale(1.02);
+}
+button {
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 28px;
+}
+
+    button:hover {
+        background-color: #ff0022;
+        color: white;
+        transition: .4s;
+        transform: scale(1.2);
+    }
+
+
+a {
+    background-color:white;
+    text-decoration: none;
+    color: black;
+    border: solid 1px white;
+    border-radius: 20px;
+    padding:5px
+    
+}
+
+    a:hover {
+        background-color: #ff0022;
+        color: white;
+        transition: .4s;
+        transform: scale(1.2);
+    }

@@ -1,0 +1,47 @@
+﻿body {
+    background: linear-gradient(270deg, #87711b, black);
+    color: white;
+    font-family: Tahoma;
+    font-size: 14px;
+    line-height: 20px;
+}
+.weather {
+    margin: 15px;
+    background-color: #111111;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 0 #e6bb10;
+}
+
+    .weather:hover {
+        box-shadow: 0 0 600px 0 #e6bb10;
+        transition: .4s;
+        transform: scale(1.03);
+    }
+
+button {
+    border-radius: 90px;
+    margin: 5px;
+    width: 40%;
+    font-size: 35px;
+    padding:5px;
+}
+    button:hover {
+        transition: .4s;
+        transform: scale(1.2);
+        background-color: #e6bb10;
+    }
+.bosluk{
+    border-radius:150px;
+    width:80%;
+    font-size:30px;
+}
+
+
+.bosluk:focus-visible {
+    background-color: #e6bb10;
+    text-decoration-color: #000000;
+}
+.row{
+    font-family:'Times New Roman', Times, serif
+}

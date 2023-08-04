@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "BMICalculator";
+    Layout = "_BMI";
+}
+
+@model BMIModel
+
+<div class="container" id="bmicalc">
+    <div class="row">
+        <div class="col-sm-4 mt-5">
+            <div class="bmi">
+                <form>
+                    <h2>Informations</h2>
+                    <div class="inputH inputBox">
+                        <input  type="number" id="inputH" required>
+                        <i class="fa-solid fa-ruler"></i>
+                        <i2>Height (cm)</i2>
+                    </div>
+                    <div class="inputW inputBox">
+                        <input type="number" id="inputW" required>
+                        <i class="fa-solid fa-weight-scale"></i>
+                        <i2>Weight (kg)</i2>
+                    </div>
+                    <br />
+                    <button type="submit" class="calculate" id="submit" value="submit">Calculate</button>
+                    <button href="#" class="reset" onclick="ResetPage()" id="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+        <div class="col mt-5">
+            <div class="res">
+                <form>
+                    <h2 data-language="result">Result</h2>
+                   
+                    <h3 id="bmi-status">-</h3>
+                    <h3 id="bmi-output">-</h3>
+                    <br />
+                    <h1>BMI</h1>
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <script>
+
+        document.getElementById('bmicalc').addEventListener("submit", (e) => {
+            e.preventDefault();
+            var hght = document.getElementById("inputH").value;
+            var wght = document.getElementById("inputW").value;
+
+            $.ajax(
+                {
+                    url: '@Url.Action("Index","BMI")',
+                    type: "POST",
+                    data:
+                    {
+                        Height: parseFloat(hght), Weight: parseFloat(wght)
+                    },
+                    success: function (data) {
+                        var data2 = JSON.parse(data);
+                        document.getElementById("bmi-output").textContent = data2.BMI;
+                        document.getElementById("bmi-status").textContent = data2.BMIRange;
+                    },
+                    error: function (err) {
+                        alert(err.statusText + " " + err.url)
+                    }
+                });
+        });
+    </script>
+
+    <script>
+        function ResetPage() {
+            document.getElementById("inputH").value = "";
+            document.getElementById("inputW").value = "";
+            document.getElementById("bmi-output").innerHTML = "-";
+            document.getElementById("bmi-status").innerHTML = "-";
+        }
+    </script>
+}

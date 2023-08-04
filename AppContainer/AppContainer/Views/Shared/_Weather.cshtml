@@ -1,0 +1,66 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppContainer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/WeatherApp.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AppContainer.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("addCSS", required: false)
+    @await RenderSectionAsync("addWeatherCss",required:false)
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+
+
+        <div class="row text-center">
+            <header class="col mt-5">
+                <h1 class="header">Weather Forecast</h1>
+            </header>
+        </div>
+
+
+
+        <main role="main" class="pb-3 mt-4">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+
+
+    <script>
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
+        const apiKey = "e61816fa1b82c8be23ee53b95f92deb3";
+        const searchBox = document.querySelector(".search input")
+        const searchBtn = document.querySelector(".search button")
+        async function checkWeather(cityname) {
+            const response = await fetch(apiUrl + cityname + '&appid=' + apiKey);
+            var data = await response.json();
+            console.log(data);
+            document.querySelector(".cityname").innerHTML = data.name;
+            document.querySelector(".countryname").innerHTML = data.sys.country;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp - 273.15) + "°C";
+            document.querySelector(".pressure").innerHTML = data.main.pressure + " mb";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
+            document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+            document.querySelector(".sunny").innerHTML = data.weather[0].main;
+        }
+        searchBtn.addEventListener("click", () => {
+            checkWeather(searchBox.value);
+        })
+    </script>
+    <script src="https://kit.fontawesome.com/8d6ffd1a84.js" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

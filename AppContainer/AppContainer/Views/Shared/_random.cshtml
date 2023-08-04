@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppContainer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/RandomQuotes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AppContainer.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+
+
+    <script>
+        var apiUrl = "https://api.quotable.io/random";
+        const quoteText = document.querySelector(".quote");
+        const authorName = document.querySelector(".author .name");
+        const quoteBtn = document.querySelector(".button");
+        const copyBtn = document.querySelector(".copy");
+        const tweetBtn = document.querySelector(".tweet");
+        async function randomQuote(jsonData) {
+            const response = await fetch(apiUrl);
+            var data = await response.json();
+            console.log(data);
+            quoteText.innerHTML = data.content;
+            authorName.innerHTML = data.author;
+        }
+        quoteBtn.addEventListener("click", randomQuote);
+        copyBtn.addEventListener("click", () => {
+            navigator.clipboard.writeText(quoteText.innerHTML);
+        })
+        tweetBtn.addEventListener("click", () => {
+            let tweetUrl = 'https://twitter.com/intent/tweet?hashtags=YazılımPark&text=' + quoteText.innerHTML;
+            window.open(tweetUrl, "_blank");
+        })
+    </script>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/RandomQuotes.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
